@@ -129,24 +129,23 @@
 
       <h2 class="sub-header">Section title</h2>
       <div class="table-responsive">
-        <table class="table table-striped">
+        <table class="table table-striped" >
           <thead>
           <tr>
-            <th>#</th>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
+            <th>Expense Name</th>
+            <th>Expense I.D</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Time</th>
           </tr>
           </thead>
-          <tbody>
-          <td>1,014</td>
-            <td>per</td>
-            <td>inceptos</td>
-            <td>himenaeos</td>
-            <td>Curabitur</td>
+          <tbody ng-repeat="data in expenseObj.expenseList">
+          <td>{{data.exname}}</td>
+            <td>{{data.exid}}</td>
+            <td>{{data.category}}</td>
+            <td>{{data.date}}</td>
+            <td>{{data.time}}</td>
           </tr>
-
           </tbody>
         </table>
       </div>
