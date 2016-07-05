@@ -1,7 +1,6 @@
 app.controller('appCtrl',['$scope','appFactory','$filter',function($scope,appFactory,$filter){
-  $scope.expenseObj={
-    expenseList:[],
-    add:function(){
+  $scope.expenseList=[];
+    $scope.add=function(){
       console.log('in ctrl');
       var exname = $scope.exname;
       var exid = $scope.exid;
@@ -12,9 +11,6 @@ app.controller('appCtrl',['$scope','appFactory','$filter',function($scope,appFac
       var data=new appFactory(exname,exid,category,date,time);
       console.log('data is:',data);
       this.expenseList.push(data);
-    },
-    save:function(){
-
     }
-  };
+
 }]);
